@@ -21,6 +21,7 @@ import { SimulationPresets } from '@/components/SimulationPresets';
 import { VisualEffects } from '@/components/VisualEffects';
 import { CollisionEffects } from '@/components/CollisionEffects';
 import { LandingPage } from '@/components/LandingPage';
+import { TutorialOverlay } from '@/components/TutorialOverlay';
 
 function App() {
   const [showSimulation, setShowSimulation] = useState(false);
@@ -32,6 +33,7 @@ function App() {
   const [autoCamera, setAutoCamera] = useState(true);
   const [showPresets, setShowPresets] = useState(false);
   const [collisionEvents, setCollisionEvents] = useState<any[]>([]);
+  const [showTutorial, setShowTutorial] = useState(false);
   
   const particleSystemRef = useRef<ParticleSystem | null>(null);
   const hierarchicalBayesianRef = useRef<HierarchicalBayesianUniverse | null>(null);
@@ -211,7 +213,10 @@ function App() {
 
   // Show landing page first
   if (!showSimulation) {
-    return <LandingPage onEnter={() => setShowSimulation(true)} />;
+    return <LandingPage onEnter={() => {
+      setShowSimulation(true);
+      setShowTutorial(true); // Show tutorial when entering simulation
+    }} />;
   }
 
   return (
@@ -244,6 +249,7 @@ function App() {
         autoCamera={autoCamera}
         onToggleAutoCamera={() => setAutoCamera(!autoCamera)}
         onShowPresets={() => setShowPresets(!showPresets)}
+        onShowTutorial={() => setShowTutorial(true)}
       />
 
       {/* Simulation Presets */}
@@ -276,6 +282,15 @@ function App() {
           The Probabilistic Universe Simulator
         </p>
       </div>
+
+      {/* Tutorial Overlay */}
+      <TutorialOverlay
+        isVisible={showTutorial}
+        onClose={() => setShowTutorial(false)}
+        onSpawnParticle={handleSpawnParticle}
+        onShowPresets={() => setShowPresets(true)}
+        particles={particles}
+      />
 
       {/* Subtle radial gradient background effect */}
       <div 

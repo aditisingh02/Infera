@@ -12,6 +12,7 @@ interface ControlPanelProps {
   autoCamera?: boolean;
   onToggleAutoCamera?: () => void;
   onShowPresets?: () => void;
+  onShowTutorial?: () => void;
 }
 
 export function ControlPanel({ 
@@ -20,7 +21,8 @@ export function ControlPanel({
   onClear,
   autoCamera = false,
   onToggleAutoCamera,
-  onShowPresets
+  onShowPresets,
+  onShowTutorial
 }: ControlPanelProps) {
   const latestParticle = particles[particles.length - 1];
   const state = latestParticle ? latestParticle.filter.getState() : null;
@@ -56,6 +58,17 @@ export function ControlPanel({
               className="border-purple-500/50 text-purple-300 hover:bg-purple-500/20 text-sm"
             >
               Presets
+            </Button>
+          )}
+        </div>
+        <div className="grid grid-cols-2 gap-2">
+          {onShowTutorial && (
+            <Button
+              onClick={onShowTutorial}
+              variant="outline"
+              className="border-purple-500/50 text-purple-300 hover:bg-purple-500/20 text-sm"
+            >
+              Tutorial
             </Button>
           )}
         </div>

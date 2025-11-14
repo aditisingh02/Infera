@@ -2,7 +2,7 @@
 
 *"A world that learns gravity — not one that knows it."*
 
-[![Demo](https://img.shields.io/badge/🚀-Live_Demo-9b5de5)](https://infera.vercel.app)
+[![Demo](https://img.shields.io/badge/🚀-Live_Demo-9b5de5)](https://infera-jet.vercel.app/)
 [![Bayesian](https://img.shields.io/badge/🧠-Bayesian_Learning-purple)](https://en.wikipedia.org/wiki/Bayesian_inference)
 [![Three.js](https://img.shields.io/badge/✨-Three.js-blue)](https://threejs.org/)
 
