@@ -1,8 +1,12 @@
 # Infera: The Probabilistic Universe Simulator
 
+
+
+https://github.com/user-attachments/assets/baeb841b-5cb1-4e5b-93b8-6e1b78a3fd50
+
+
+
 *"A world that learns gravity — not one that knows it."*
-
-
 [![Demo](https://img.shields.io/badge/Live_Demo-2f00bd?logo=posrtfolio&logoColor=white&style=for-the-badge)](https://infera-jet.vercel.app/)
 [![Bayesian](https://img.shields.io/badge/Bayesian_Learning-purple?logo=posrtfolio&logoColor=white&style=for-the-badge)](https://en.wikipedia.org/wiki/Bayesian_inference)
 [![Three.js](https://img.shields.io/badge/Three.js-008080?logo=posrtfolio&logoColor=white&style=for-the-badge)](https://threejs.org/)
@@ -12,8 +16,8 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/username/infera.git
-cd infera
+git clone https://github.com/aditisingh02/Infera.git
+cd Infera
 
 # Install dependencies
 npm install
@@ -63,12 +67,12 @@ flowchart TD
     Q --> T[Stable Physics Knowledge]
     T --> U[Visual: Purple → White]
     
-    style A fill:#9b5de5
-    style Q fill:#00f5d4
-    style T fill:#00f5d4
-    style U fill:#00f5d4
-    style M fill:#f15bb5
-    style N fill:#f15bb5
+    style A fill:#4d0de0
+    style Q fill:#013436
+    style T fill:#013436
+    style U fill:#013436
+    style M fill:#910459
+    style N fill:#910459
 ```
 
 ### Core Mathematical Foundation
